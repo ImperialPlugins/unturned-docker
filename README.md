@@ -11,7 +11,7 @@ This will create a docker container that will listen on 27015 for Unturned and 2
 
 Also, on each container restart the server will automatically update.
 
-You will not be able to input anything to the console (because Unity does not use stdin/stdout). Console output is worked around by using `tail` on the log file.
+You will not be able to input anything to the console (because Unity handles stdin/stdout in a weird way).
 
 ## Non-Docker Usage
 This script will also install Steamcmd.

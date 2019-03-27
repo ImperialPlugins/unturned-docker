@@ -2,6 +2,7 @@ FROM ubuntu:18.04
 LABEL maintainer="Enes Sadık Özbek <es.ozbek.me>"
 ENV DEBIAN_FRONTEND noninteractive
 ENV GAME_INSTALL_DIR /home/steam/Unturned
+ENV GAME_ID 304930
 
 EXPOSE 27015
 EXPOSE 27016
