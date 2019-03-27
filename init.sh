@@ -11,15 +11,15 @@ mkdir -p $MODULES_DIR
 
 cd $MODULES_DIR
 
-if [! -d "$MODULES_DIR/Rocket.Unturned"] then
-    if [ "$SERVER_TYPE" == "rm4"] then
+if [! -d "$MODULES_DIR/Rocket.Unturned"] ; then
+    if [ "$SERVER_TYPE" == "rm4"] ; then
         curl -s https://ci.rocketmod.net/job/Rocket.Unturned/lastSuccessfulBuild/artifact/Rocket.Unturned/bin/Release/Rocket.zip
         unzip Rocket.zip
         mv Modules/* ./
         rmdir Modules
         rm -rf ./Scripts
         rm README
-    elif [ "$SERVER_TYPE" == "rm5"] then
+    elif [ "$SERVER_TYPE" == "rm5"] ; then
         curl -s https://ci.appveyor.com/api/buildjobs/bjt7acowdq73nh4u/artifacts/Rocket.Unturned-5.0.0.237.zip
         unzip Rocket.zip
         rm README.md
