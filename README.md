@@ -1,7 +1,14 @@
 # Unturned-Docker
 This repository contains scripts for installing 64bit Unturned Linux with .NET 4.6.1 (optionally using Docker). It also uses Unturned .NET 4.6.1 versions.
 
-## Docker Usage
+# Getting started
+If you do not want to build this manually, you can visit [Docker Hub](https://hub.docker.com/r/imperialplugins/unturned) and pull from there or you can pull by using the `imperialplugins/unturned` image directly.
+
+Example:
+
+`docker run -it -e STEAM_USERNAME=myusername -e STEAM_PASSWORD=mypassword -p 27015:27015 -p 27016:27016 -e SERVER_TYPE=rm4 --restart unless-stopped --name myserverinstance imperialplugins/unturned`
+
+## Building
 To build, use `docker build . -t unturned`.
 
 After building, you can start your server like this:
