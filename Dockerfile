@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2-bionic
 LABEL maintainer="Enes Sadık Özbek <es.ozbek.me>"
 ENV DEBIAN_FRONTEND noninteractive
 ENV GAME_INSTALL_DIR /home/steam/Unturned
@@ -31,12 +31,6 @@ RUN chmod +x init.sh && \
 # Install required packages
 RUN apt-get update && \
     apt-get install -y unzip tar curl coreutils lib32gcc1 wget libgdiplus git && \
-    wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb && \
-    add-apt-repository universe && \
-    apt-get install apt-transport-https && \
-    apt-get update && \
-    apt-get install dotnet-sdk-2.2 && \
-    dpkg -i packages-microsoft-prod.deb && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
