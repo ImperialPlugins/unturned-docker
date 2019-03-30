@@ -29,10 +29,8 @@ if [ ! -d "$MODULES_DIR/Rocket.Unturned" ]; then
 fi
 
 cd $PREVIOUS_DIR
-export ROCKET_LAUNCHER_NAME=Rocket.Unturned.Launcher.exe
-export ROCKET_LAUNCHER_PATH=$GAME_INSTALL_DIR/$ROCKET_LAUNCHER_NAME
 if [ ! -d "$ROCKET_LAUNCHER_PATH" ]; then
-    cp $ROCKET_LAUNCHER_NAME $ROCKET_LAUNCHER_PATH 
+    cp ./RocketLauncher.* $GAME_INSTALL_DIR/
 fi
 
 # Start game
