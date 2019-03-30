@@ -34,7 +34,7 @@ This script will also install SteamCmd.
 
 E.g.:
 ```
-> sudo apt-get install -y unzip tar curl coreutils lib32gcc1
+> sudo apt-get install -y unzip tar curl coreutils lib32gcc1 libgdiplus
 > export GAME_INSTALL_DIR=/path/to/Unturned
 > export GAME_ID=304930
 > export SERVER_TYPE=rm4
