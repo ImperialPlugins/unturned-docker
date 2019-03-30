@@ -34,10 +34,11 @@ This script will also install SteamCmd.
 
 E.g.:
 ```
-> GAME_INSTALL_DIR=/path/to/Unturned
-> GAME_ID=304930
-> SERVER_TYPE=rm4
-> STEAM_USERNAME=myUsername
-> STEAM_PASSWORD=myPassword
+> sudo apt-get install -y unzip tar curl coreutils lib32gcc1
+> export GAME_INSTALL_DIR=/path/to/Unturned
+> export GAME_ID=304930
+> export SERVER_TYPE=rm4
+> export STEAM_USERNAME=myUsername
+> export STEAM_PASSWORD=myPassword
 > ./init.sh
 ```
