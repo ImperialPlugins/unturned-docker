@@ -21,7 +21,7 @@ if [ ! -d "$MODULES_DIR/Rocket.Unturned" ]; then
         rm README
         rm Rocket.zip
     elif [ "$SERVER_TYPE" == "rm5" ]; then
-        curl https://ci.appveyor.com/api/buildjobs/bjt7acowdq73nh4u/artifacts/Rocket.Unturned-5.0.0.237.zip -o Rocket.zip
+        curl -O -J -L https://ci.appveyor.com/api/buildjobs/bjt7acowdq73nh4u/artifacts/Rocket.Unturned-5.0.0.237.zip -o Rocket.zip
         unzip Rocket.zip
         rm README.md
         rm LICENSE
