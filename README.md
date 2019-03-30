@@ -31,7 +31,7 @@ First install required dependencies:
 $ sudo apt-get install -y unzip tar curl coreutils lib32gcc1 libgdiplus
 ```
 
-Then install .NET Core Runtime following [this guide](https://dotnet.microsoft.com/download/linux-package-manager/ubuntu18-04/runtime-current).
+Then install .NET Core SDK following [this guide](https://dotnet.microsoft.com/download/linux-package-manager/ubuntu18-04/sdk-current).
 
 After installing .NET Core, set GAME_INSTALL_DIR, GAME_ID (304930 for Unturned), STEAM_USERNAME and STEAM_PASSWORD, SERVER_TYPE environment variables:
 

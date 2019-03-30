@@ -35,7 +35,7 @@ RUN apt-get update && \
     add-apt-repository universe && \
     apt-get install apt-transport-https && \
     apt-get update && \
-    apt-get install aspnetcore-runtime-2.2 && \
+    apt-get install dotnet-sdk-2.2 && \
     dpkg -i packages-microsoft-prod.deb && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
