@@ -30,11 +30,13 @@ RUN chmod +x init.sh && \
 
 # Install required packages
 RUN apt-get update && \
-    apt-get install -y unzip tar curl coreutils lib32gcc1 wget libgdiplus gnupg ca-certificates && \
-    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF && \
-    echo "deb https://download.mono-project.com/repo/ubuntu stable-bionic main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list && \
+    apt-get install -y unzip tar curl coreutils lib32gcc1 wget libgdiplus && \
+    wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb && \
+    add-apt-repository universe && \
+    apt-get install apt-transport-https && \
     apt-get update && \
-    apt-get -y install mono-devel && \
+    apt-get install aspnetcore-runtime-2.2 && \
+    dpkg -i packages-microsoft-prod.deb && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 

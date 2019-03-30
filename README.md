@@ -31,9 +31,9 @@ First install required dependencies:
 $ sudo apt-get install -y unzip tar curl coreutils lib32gcc1 libgdiplus
 ```
 
-Then install mono-devel following [this guide](https://www.mono-project.com/download/stable/#download-lin).
+Then install .NET Core Runtime following [this guide](https://dotnet.microsoft.com/download/linux-package-manager/ubuntu18-04/runtime-current).
 
-After installing mono, set GAME_INSTALL_DIR, GAME_ID (304930 for Unturned), STEAM_USERNAME and STEAM_PASSWORD, SERVER_TYPE environment variables:
+After installing .NET Core, set GAME_INSTALL_DIR, GAME_ID (304930 for Unturned), STEAM_USERNAME and STEAM_PASSWORD, SERVER_TYPE environment variables:
 
 ```sh
 $ export GAME_INSTALL_DIR=/path/to/Unturned
