@@ -26,19 +26,26 @@ To build, use `docker build . -t unturned`.
 After building, you can start your server like the command in "Getting Started", but you will have to replace "imperialplugins/unturned" with just "unturned".
 
 ## Non-Docker Usage
-First set GAME_INSTALL_DIR, GAME_ID (304930 for Unturned), STEAM_USERNAME and STEAM_PASSWORD, SERVER_TYPE environment variables.
-
-Finally, run `init.sh` to install / update your server. It will automatically start the server afterwards.
-
-This script will also install SteamCmd.
-
-E.g.:
+First install required dependencies:
+```sh
+$ sudo apt-get install -y unzip tar curl coreutils lib32gcc1 libgdiplus
 ```
-> sudo apt-get install -y unzip tar curl coreutils lib32gcc1 libgdiplus
-> export GAME_INSTALL_DIR=/path/to/Unturned
-> export GAME_ID=304930
-> export SERVER_TYPE=rm4
-> export STEAM_USERNAME=myUsername
-> export STEAM_PASSWORD=myPassword
-> ./init.sh
+
+Then install mono-devel following [this guide](https://www.mono-project.com/download/stable/#download-lin).
+
+After installing mono, set GAME_INSTALL_DIR, GAME_ID (304930 for Unturned), STEAM_USERNAME and STEAM_PASSWORD, SERVER_TYPE environment variables:
+
+```sh
+$ export GAME_INSTALL_DIR=/path/to/Unturned
+$ export GAME_ID=304930
+$ export SERVER_TYPE=rm4
+$ export STEAM_USERNAME=myUsername
+$ export STEAM_PASSWORD=myPassword
+```
+
+You do not have to install steacmd, this script will do it for you.
+
+Finally, run `init.sh` to install / update your server. It will automatically start the server afterwards:
+```sh
+$ ./init.sh
 ```
