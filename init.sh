@@ -28,7 +28,7 @@ if [ ! -d "$MODULES_DIR/Rocket.Unturned" ]; then
     fi    
 fi
 
-if [ ! -d "$GAME_INSTALL_DIR/Rocket.Unturned.Launcher" ]
+if [ ! -d "$GAME_INSTALL_DIR/Rocket.Unturned.Launcher" ]; then
     cd $GAME_INSTALL_DIR
     git clone https://github.com/RocketMod/Rocket.Unturned
     mv ./Rocket.Unturned/Rocket.Unturned.Launcher ./
