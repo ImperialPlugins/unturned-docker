@@ -30,7 +30,7 @@ RUN chmod +x init.sh && \
 
 # Install required packages
 RUN apt-get update && \
-    apt-get install -y unzip tar curl coreutils lib32gcc1 wget libgdiplus git && \
+    apt-get install -y unzip tar curl coreutils lib32gcc1 wget libgdiplus && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
