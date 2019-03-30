@@ -1,13 +1,12 @@
 #!/bin/bash
 PREVIOUS_DIR=$PWD
-MODULES_DIR=$GAME_INSTALL_DIR/Modules
-
 curl -s https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz | tar -vxz
 
 # Update / install server
 ./steamcmd.sh +@sSteamCmdForcePlatformBitness 64 +login $STEAM_USERNAME $STEAM_PASSWORD +force_install_dir $GAME_INSTALL_DIR +app_update $GAME_ID +quit
 
 # Optionlly install RocketMod
+export MODULES_DIR=$GAME_INSTALL_DIR/Modules
 mkdir -p $MODULES_DIR
 cd $MODULES_DIR
 
@@ -27,6 +26,12 @@ if [ ! -d "$MODULES_DIR/Rocket.Unturned" ]; then
         rm LICENSE
         rm Rocket.zip
     fi    
+fi
+
+export ROCKET_LAUNCHER_NAME=Rocket.Unturned.Launcher.exe
+export ROCKET_LAUNCHER_PATH=$GAME_INSTALL_DIR/$ROCKET_LAUNCHER_NAME
+if [ ! -d "$ROCKET_LAUNCHER_PATH" ]; then
+    cp $ROCKET_LAUNCHER_NAME $ROCKET_LAUNCHER_PATH 
 fi
 
 # Start game
