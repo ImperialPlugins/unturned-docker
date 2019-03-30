@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2-bionic
+FROM mcr.microsoft.com/dotnet/core/runtime:2.2-bionic
 LABEL maintainer="Enes Sadık Özbek <es.ozbek.me>"
 ENV DEBIAN_FRONTEND noninteractive
 ENV GAME_INSTALL_DIR /home/steam/Unturned
