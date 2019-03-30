@@ -28,12 +28,12 @@ After building, you can start your server like the command in "Getting Started",
 ## Non-Docker Usage
 First install required dependencies:
 ```sh
-$ sudo apt-get install -y unzip tar curl coreutils lib32gcc1 libgdiplus
+$ sudo apt-get install -y unzip tar curl coreutils lib32gcc1 libgdiplus git
 ```
 
 Then install .NET Core SDK following [this guide](https://dotnet.microsoft.com/download/linux-package-manager/ubuntu18-04/sdk-current).
 
-After installing .NET Core, set GAME_INSTALL_DIR, GAME_ID (304930 for Unturned), STEAM_USERNAME and STEAM_PASSWORD, SERVER_TYPE environment variables:
+After installing the .NET Core SDK, set GAME_INSTALL_DIR, GAME_ID (304930 for Unturned), STEAM_USERNAME and STEAM_PASSWORD, SERVER_TYPE environment variables:
 
 ```sh
 $ export GAME_INSTALL_DIR=/path/to/Unturned

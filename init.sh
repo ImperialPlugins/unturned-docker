@@ -28,10 +28,13 @@ if [ ! -d "$MODULES_DIR/Rocket.Unturned" ]; then
     fi    
 fi
 
-cd $PREVIOUS_DIR
-if [ ! -d "$ROCKET_LAUNCHER_PATH" ]; then
-    cp ./RocketLauncher.* $GAME_INSTALL_DIR/
+if [ ! -d "$GAME_INSTALL_DIR/Rocket.Unturned.Launcher" ]
+    cd $GAME_INSTALL_DIR
+    git clone https://github.com/RocketMod/Rocket.Unturned
+    mv ./Rocket.Unturned/Rocket.Unturned.Launcher ./
+    rm -rf ./Rocket.Unturned
 fi
 
 # Start game
+cd $PREVIOUS_DIR
 ./start_gameserver.sh

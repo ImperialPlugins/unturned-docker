@@ -30,7 +30,7 @@ RUN chmod +x init.sh && \
 
 # Install required packages
 RUN apt-get update && \
-    apt-get install -y unzip tar curl coreutils lib32gcc1 wget libgdiplus && \
+    apt-get install -y unzip tar curl coreutils lib32gcc1 wget libgdiplus git && \
     wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb && \
     add-apt-repository universe && \
     apt-get install apt-transport-https && \
