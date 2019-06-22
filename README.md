@@ -6,7 +6,7 @@ Images are hosted at `imperialplugins/unturned`. You can visit the [Docker Hub R
 
 Example command to host a simple RocketMod 4 Unturned server:
 
-`docker run -it -e STEAM_USERNAME=myusername -e STEAM_PASSWORD=mypassword -p 27015:27015 -p 27016:27016 -e SERVER_TYPE=rm4 --restart unless-stopped --name myserverinstance imperialplugins/unturned`
+`docker run -it -p 27015:27015 -p 27016:27016 -e SERVER_TYPE=rm4 --restart unless-stopped --name myserverinstance imperialplugins/unturned`
 
 This will create a docker container that will listen on 27015 for Unturned and 27016 for Steam queries with RocketMod 4. It will automatically restart should the server shut down or crash.
 
