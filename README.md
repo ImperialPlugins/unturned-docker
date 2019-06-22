@@ -33,14 +33,12 @@ $ sudo apt-get install -y unzip tar curl coreutils lib32gcc1 libgdiplus git
 
 Then install .NET Core SDK following [this guide](https://dotnet.microsoft.com/download/linux-package-manager/ubuntu18-04/sdk-current).
 
-After installing the .NET Core SDK, set GAME_INSTALL_DIR, GAME_ID (304930 for Unturned), STEAM_USERNAME and STEAM_PASSWORD, SERVER_TYPE environment variables:
+After installing the .NET Core SDK, set GAME_INSTALL_DIR, GAME_ID (304930 for normal Unturned, 1110390 for dedicated Unturned), STEAM_USERNAME and STEAM_PASSWORD, SERVER_TYPE environment variables:
 
 ```sh
 $ export GAME_INSTALL_DIR=/path/to/Unturned
-$ export GAME_ID=304930
+$ export GAME_ID=1110390
 $ export SERVER_TYPE=rm4
-$ export STEAM_USERNAME=myUsername
-$ export STEAM_PASSWORD=myPassword
 ```
 
 You do not have to install steacmd, this script will do it for you.
