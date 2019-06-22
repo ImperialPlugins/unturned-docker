@@ -3,7 +3,7 @@ SCRIPT_DIR=$PWD
 curl -s https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz | tar -vxz
 
 # Update / install server
-./steamcmd.sh +@sSteamCmdForcePlatformBitness 64 +login $STEAM_USERNAME $STEAM_PASSWORD +force_install_dir $GAME_INSTALL_DIR +app_update $GAME_ID +quit
+./steamcmd.sh +@sSteamCmdForcePlatformBitness 64 +login anonymous +force_install_dir $GAME_INSTALL_DIR +app_update $GAME_ID +quit
 
 # Optionlly install RocketMod
 export MODULES_DIR=$GAME_INSTALL_DIR/Modules
