@@ -8,6 +8,9 @@ Example command to host a simple RocketMod 4 Unturned server:
 
 `docker run -it -p 27015:27015 -p 27016:27016 -e SERVER_TYPE=rm4 --restart unless-stopped --name myserverinstance imperialplugins/unturned`
 
+You can also append server args:
+`docker run -it -p 27015:27015 -p 27016:27016 -e SERVER_TYPE=rm4 --restart unless-stopped --name myserverinstance imperialplugins/unturned -SkipAssets`
+
 This will create a docker container that will listen on 27015 for Unturned and 27016 for Steam queries with RocketMod 4. It will automatically restart should the server shut down or crash.
 
 Also, on each container restart the server will automatically update.
@@ -45,5 +48,10 @@ You do not have to install steacmd, this script will do it for you.
 
 Finally, run `init.sh` to install / update your server. It will automatically start the server afterwards:
 ```sh
-$ ./init.sh
+$ ./init.sh 
+```
+
+You can also append server args like this:
+```sh
+$ ./init.sh -SkipAssets
 ```

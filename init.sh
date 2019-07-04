@@ -1,6 +1,7 @@
 #!/bin/bash
 SCRIPT_DIR=$PWD
 curl -s https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz | tar -vxz
+cp -f linux64/steamclient.so Unturned_Headless_Data/Plugins/x86_64/steamclient.so
 
 # Update / install server
 ./steamcmd.sh +@sSteamCmdForcePlatformBitness 64 +login anonymous +force_install_dir $GAME_INSTALL_DIR +app_update $GAME_ID +quit
@@ -34,4 +35,4 @@ fi
 
 # Start game
 cd $SCRIPT_DIR
-./start_gameserver.sh
+./start_gameserver.sh "$@"

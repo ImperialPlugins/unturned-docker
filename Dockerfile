@@ -1,8 +1,9 @@
-FROM mcr.microsoft.com/dotnet/core/runtime:2.2-bionic
+FROM ubuntu:bionic
 LABEL maintainer="Enes Sadık Özbek <es.ozbek.me>"
 ENV DEBIAN_FRONTEND noninteractive
 ENV GAME_INSTALL_DIR /home/steam/Unturned
 ENV GAME_ID 1110390
+ENV SERVER_NAME server
 
 EXPOSE 27015
 EXPOSE 27016
@@ -36,4 +37,4 @@ RUN apt-get update && \
 
 USER steam
 WORKDIR /opt/steamcmd
-ENTRYPOINT ["./init.sh"]
+ENTRYPOINT ["init.sh"]
