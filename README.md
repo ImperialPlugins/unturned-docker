@@ -15,8 +15,6 @@ This will create a docker container that will listen on 27015 for Unturned and 2
 
 Also, on each container restart the server will automatically update.
 
-You will not be able to input anything to the console (because Unity handles stdin/stdout in a weird way).
-
 ## Server Type
 The following are supported for the SERVER_TYPE environment variable:
 * rm4 (installs RocketMod 4 module)
