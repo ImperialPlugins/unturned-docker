@@ -37,4 +37,4 @@ RUN apt-get update && \
 
 USER steam
 WORKDIR /opt/steamcmd
-ENTRYPOINT ["init.sh"]
+ENTRYPOINT ["./init.sh"]
