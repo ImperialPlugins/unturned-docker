@@ -4,7 +4,7 @@ curl -s https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz |
 cp -f linux64/steamclient.so Unturned_Headless_Data/Plugins/x86_64/steamclient.so
 
 # Update / install server
-./steamcmd.sh +@sSteamCmdForcePlatformBitness 64 +login anonymous +force_install_dir $GAME_INSTALL_DIR +app_update $GAME_ID +quit
+./steamcmd.sh +login $STEAM_USERNAME $STEAM_PASSWORD $STEAM_GUARD_TOKEN $STEAM_CMD_ARGS +force_install_dir $GAME_INSTALL_DIR +@sSteamCmdForcePlatformBitness 64 +app_update $GAME_ID +quit
 
 # Optionlly install RocketMod
 export MODULES_DIR=$GAME_INSTALL_DIR/Modules
