@@ -31,13 +31,14 @@ After building, you can start your server like the command in "Getting Started",
 ## Non-Docker Usage
 First install required dependencies:
 ```sh
-$ sudo apt-get install -y unzip tar curl coreutils lib32gcc1 libgdiplus git
+$ sudo apt-get install -y unzip tar curl coreutils lib32gcc1 libgdiplus
 ```
 
-Set GAME_INSTALL_DIR, GAME_ID (304930 for normal Unturned, 1110390 for dedicated Unturned), SERVER_TYPE environment variables:
+Set GAME_INSTALL_DIR, SERVER_NAME, GAME_ID (304930 for normal Unturned, 1110390 for dedicated Unturned), SERVER_TYPE environment variables:
 
 ```sh
 $ export GAME_INSTALL_DIR=/path/to/Unturned
+$ export SERVER_NAME=YOUR_SERVER_INSTANCE_NAME
 $ export GAME_ID=1110390
 $ export SERVER_TYPE=rm4
 ```
