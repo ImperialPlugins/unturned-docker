@@ -29,10 +29,6 @@ if [ ! -d "$MODULES_DIR/Rocket.Unturned" ]; then
     fi    
 fi
 
-if [ ! -d "$GAME_INSTALL_DIR/RocketLauncher.dll" ]; then
-    cp $SCRIPT_DIR/RocketLauncher/* $GAME_INSTALL_DIR
-fi
-
 # Start game
 cd $SCRIPT_DIR
 ./start_gameserver.sh "$@"
