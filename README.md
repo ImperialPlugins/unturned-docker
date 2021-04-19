@@ -7,15 +7,15 @@ Images are hosted at `imperialplugins/unturned`. You can visit the [Docker Hub R
 
 Example command to host a simple RocketMod 4 Unturned server:
 
-`docker run -it -p 27015:27015 -p 27016:27016 -e SERVER_TYPE=rm4 --restart unless-stopped --name myserverinstance imperialplugins/unturned`
+`docker run -it -v <host_path>:/home/steam/Unturned -p 27015:27015 -p 27016:27016 -e SERVER_TYPE=rm4 --restart unless-stopped --name myserverinstance imperialplugins/unturned`
 
 You can also append Unturned server args:
-`docker run -it -p 27015:27015 -p 27016:27016 -e SERVER_TYPE=rm4 --restart unless-stopped --name myserverinstance imperialplugins/unturned -SkipAssets`
+`docker run -it -v <host_path>:/home/steam/Unturned -p 27015:27015 -p 27016:27016 -e SERVER_TYPE=rm4 --restart unless-stopped --name myserverinstance imperialplugins/unturned -SkipAssets`
 
 This will create a docker container that will listen on 27015 for Unturned and 27016 for Steam queries with RocketMod 4. 
 
 You can also define STEAM_CMD_ARGS to run your own steamcmd commands on each restart:
-`docker run -it -p 27015:27015 -p 27016:27016 -e STEAM_CMD_ARGS="+download_depot <somedepot>" -e SERVER_TYPE=rm4 --restart unless-stopped --name myserverinstance imperialplugins/unturned -SkipAssets`
+`docker run -it -v <host_path>:/home/steam/Unturned -p 27015:27015 -p 27016:27016 -e STEAM_CMD_ARGS="+download_depot <somedepot>" -e SERVER_TYPE=rm4 --restart unless-stopped --name myserverinstance imperialplugins/unturned -SkipAssets`
 
 ## Server Type
 The following are supported for the SERVER_TYPE environment variable:
