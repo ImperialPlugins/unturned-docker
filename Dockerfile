@@ -23,7 +23,9 @@ RUN mkdir -p /opt/steamcmd && \
     cd /opt/steamcmd && \
     chown -R steam /opt/steamcmd
 
+VOLUME ["/home/steam/Unturned"]
 WORKDIR /opt/steamcmd
+
 COPY . .
 
 # Set perms
