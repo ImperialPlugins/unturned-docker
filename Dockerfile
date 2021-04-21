@@ -19,11 +19,18 @@ RUN adduser \
 	steam
 
 # Create working directory
+RUN mkdir -p /home/steam/Unturned && \
+	cd /home/steam/Unturned && \
+	chown -R steam /home/steam/Unturned
+
+VOLUME ["/home/steam/Unturned"]
+
 RUN mkdir -p /opt/steamcmd && \
     cd /opt/steamcmd && \
     chown -R steam /opt/steamcmd
 
 WORKDIR /opt/steamcmd
+
 COPY . .
 
 # Set perms
