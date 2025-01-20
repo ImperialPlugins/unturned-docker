@@ -1,0 +1,22 @@
+---
+volumes:
+  data:
+
+services:
+  server:
+    image: "unturned-docker:latest"
+    build:
+      args:
+        PLATFORM: linux/amd64
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "27015:27015"
+      - "27016:27016"
+    volumes:
+      - data:/home/steam/Unturned
+    environment:
+      SERVER_TYPE: rm4
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
