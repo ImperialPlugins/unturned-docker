@@ -16,9 +16,11 @@ cd $MODULES_DIR
 
 if [ ! -d "$MODULES_DIR/Rocket.Unturned" ]; then
     if [ "$SERVER_TYPE" == "rm4" ]; then
-        curl https://ci.rocketmod.net/job/Rocket.Unturned/lastSuccessfulBuild/artifact/Rocket.Unturned/bin/Release/Rocket.zip -o Rocket.zip
+        curl -L https://github.com/RocketMod/Rocket.Unturned/releases/download/4.9.3.0/Rocket.Unturned.zip -o Rocket.zip
         unzip Rocket.zip
         mv Modules/* ./
+        mv Scripts/Linux/* ../Scripts/
+        cp -rf ../Extras/Rocket.Unturned ./
         rmdir Modules
         rm -rf ./Scripts
         rm README
