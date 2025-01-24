@@ -3,3 +3,6 @@
 Dockerfile
 LICENSE
 README.md
+.gitignore
+.gitattributes
+.idea
