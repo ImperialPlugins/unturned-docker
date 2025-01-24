@@ -14,15 +14,7 @@ fi
 
 if [ ! -d "$MODULES_DIR/Rocket.Unturned" ]; then
     if [ "$SERVER_TYPE" == "rm4" ]; then
-      mkdir /tmp/rm && \
-      cd /tmp/rm && \
-      curl -L https://github.com/RocketMod/Rocket.Unturned/releases/download/4.9.3.0/Rocket.Unturned.zip -o Rocket.zip && \
-      unzip Rocket.zip && \
-      mv Modules/* "$GAME_INSTALL_DIR"/Modules/ && \
-      mv Scripts/Linux "$GAME_INSTALL_DIR"/Scripts && \
-      cp -rf "$GAME_INSTALL_DIR"/Extras/Rocket.Unturned/ "$GAME_INSTALL_DIR"/Modules/ && \
-      rm Rocket.zip
-      rm . -rf
+      cp -rf "$GAME_INSTALL_DIR"/Extras/Rocket.Unturned/ "$GAME_INSTALL_DIR"/Modules/
     fi
 fi
 
